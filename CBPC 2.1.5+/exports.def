@@ -1,0 +1,3 @@
+LIBRARY	"CBPAS"
+EXPORTS
+SKSEPlugin_Load
