@@ -158,7 +158,14 @@ BSFixedString CBPCUpdatePhysics2(StaticFunctionTag* base, BSFixedString MaleGeni
 
 	std::string	runtimeDirectory = GetRuntimeDirectory();
 
+	//Male
 	bool cwriteresult = ReadWriteCBPCConfig2(runtimeDirectory + "Data\\SKSE\\Plugins\\CBPCollisionConfig.txt", sMaleGenitalHeadCollisionSize, sMaleGenitalBaseCollisionSize);
+	if (!cwriteresult) {
+		return BSFixedString("0");
+	}
+
+	//Female\Futa
+	cwriteresult = ReadWriteCBPCConfig2(runtimeDirectory + "Data\\SKSE\\Plugins\\CBPCollisionConfig_Female.txt", sMaleGenitalHeadCollisionSize, sMaleGenitalBaseCollisionSize);
 	if (!cwriteresult) {
 		return BSFixedString("0");
 	}
